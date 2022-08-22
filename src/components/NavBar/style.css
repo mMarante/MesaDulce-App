@@ -1,0 +1,29 @@
+.navbar-container{
+    background-color: whitesmoke;
+    height: 75px;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.menu ul{ 
+    display: flex;
+    flex-direction: row;
+    list-style: none;}
+
+.menu li{
+    margin-right: 20px;
+}
+
+.menu a{
+    text-decoration: none;
+    font-size: large;
+}
+
+.logo{ height: 75px;}
+
+.logo img{ height: 75px;}
+
+.carrito img{ height: 40px;}
