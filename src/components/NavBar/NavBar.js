@@ -1,6 +1,6 @@
 import './style.css'
 import logo from '../Assets/Mesa.png'
-import cake from '../Assets/Cake.png'
+import CartWidget from './CartWidget.js'
 
 const NavBar = () => {
     return (
@@ -14,9 +14,9 @@ const NavBar = () => {
                 <li><a href="#">Contacto</a></li>
             </ul>
         </div>
-        <div className="carrito">
-            <img src={cake} alt="carrito"></img>
-        </div>
+        
+        <CartWidget/>
+
     </div>)
 }
 

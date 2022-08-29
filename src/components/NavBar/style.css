@@ -26,4 +26,18 @@
 
 .logo img{ height: 75px;}
 
+.carrito{ display: flex;
+    align-items: center;}
+
+.counter{
+    color: antiquewhite;
+    background-color: brown;
+    padding: 5px;
+    border-radius: 100%;
+}
+
 .carrito img{ height: 40px;}
+
+.ItemListContainer{ display: flex;
+justify-content: center;
+color: brown;}
