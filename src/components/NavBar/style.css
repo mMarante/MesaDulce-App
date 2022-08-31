@@ -41,3 +41,42 @@
 .ItemListContainer{ display: flex;
 justify-content: center;
 color: brown;}
+
+.counterContainer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    background-color: rgb(194, 194, 194);
+    width: 300px;
+    padding: 20px;
+    margin-left: 40%;
+    margin-bottom: 20px;
+    color: rgb(54, 54, 54);
+}
+
+.cardCounter{
+    font-size: larger;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 200px;
+    background-color: rgb(246, 239, 239);
+    border-radius: 10px;
+    border: solid gray 2px;
+    padding: 0px 30px;
+}
+
+button { all: unset;
+    cursor: pointer;
+    padding: 5px ;
+    color: rgb(67, 123, 214);
+    font-size: larger;
+    font-weight: bold;
+}
+
+button:hover{
+    outline: green 5px auto;
+}
+
