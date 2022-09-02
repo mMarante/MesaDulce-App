@@ -38,10 +38,6 @@
 
 .carrito img{ height: 40px;}
 
-.ItemListContainer{ display: flex;
-justify-content: center;
-color: brown;}
-
 .counterContainer{
     display: flex;
     flex-direction: column;
@@ -77,6 +73,7 @@ button { all: unset;
 }
 
 button:hover{
-    outline: green 5px auto;
+    color: rgb(72, 219, 72);
+    transition: all ease-in 0.2s;
 }
 
