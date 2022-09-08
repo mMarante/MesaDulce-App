@@ -1,5 +1,5 @@
 import './style.css'
-import logo from '../Assets/Mesa.png'
+import logo from '../assets/Mesa.png'
 import CartWidget from './CartWidget.js'
 
 const NavBar = () => {

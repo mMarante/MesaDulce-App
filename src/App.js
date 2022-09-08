@@ -1,7 +1,8 @@
 import './App.css';
-import NavBar from './components/NavBar/NavBar';
-import ItemCount from './components/Counter/ItemCount';
-import ItemListContainer from './components/Products/ListContainer/ItemListContainer';
+import NavBar from './components/navBar/NavBar';
+import ItemCount from './components/counter/ItemCount';
+import ItemListContainer from './components/Products/listContainer/ItemListContainer';
+import ItemDetailContainer from './components/Products/itemDetailContainer/ItemDetailContainer';
 
 function App() {
   return (
@@ -11,6 +12,8 @@ function App() {
       <div className='container'>
       <ItemListContainer/>
       </div>
+
+      <ItemDetailContainer/>
       <ItemCount stock={20} initial={1}/>
   
       <header className="App-header">

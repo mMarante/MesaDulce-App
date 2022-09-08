@@ -1,0 +1,7 @@
+.itemDetail{
+    display: flex;
+    background-color: rgb(218, 222, 119);
+    text-align:left;
+    justify-content: center;
+
+}

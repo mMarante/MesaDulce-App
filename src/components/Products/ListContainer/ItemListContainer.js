@@ -1,6 +1,6 @@
 import data from "./mock-data";
 import { useEffect, useState } from "react";
-import ItemList from "../ItemList/ItemList";
+import ItemList from "../itemList/ItemList";
 
 
 const ItemListContainer = () =>{

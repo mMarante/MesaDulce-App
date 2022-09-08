@@ -1,4 +1,4 @@
-import cake from '../Assets/Cake.png'
+import cake from '../assets/Cake.png'
 
 const CartWidget = () => {
 
