@@ -1,9 +1,13 @@
 import data from "./mock-data";
 import { useEffect, useState } from "react";
 import ItemList from "../itemList/ItemList";
+import "./itemList.css";
+import { useParams } from "react-router-dom";
 
 
 const ItemListContainer = () =>{
+    const {categoryId} = useParams();
+    console.log ("categoryId",categoryId); 
     const [items, setItems] = useState([]);
 
     const getData = new Promise((resolve,reject)=>{
@@ -14,16 +18,22 @@ const ItemListContainer = () =>{
 
     useEffect(()=> {
         getData.then((result)=> {
-            setItems(result);
+            if(categoryId){
+            const newProducts = result.filter(item=>item.category === categoryId);
+            
+            setItems(newProducts)
+            console.log(newProducts)
+        } else{setItems(result)}
         })
-    })
+    },[categoryId])
     
     return(<>
 
+        <div className="container">
         { items.length > 0 ? (<ItemList product={items}/>):(
             <h2>Cargando...</h2>
         )}
-
+        </div>
         </>
     )
 }

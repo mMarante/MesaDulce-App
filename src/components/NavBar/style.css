@@ -20,6 +20,7 @@
 .menu a{
     text-decoration: none;
     font-size: large;
+    margin: 10px;
 }
 
 .logo{ height: 75px;}
@@ -77,3 +78,10 @@ button:hover{
     transition: all ease-in 0.2s;
 }
 
+.active {
+    color: brown;
+}
+
+.inactive {
+    color: burlywood;
+}

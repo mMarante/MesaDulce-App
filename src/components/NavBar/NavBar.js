@@ -1,6 +1,7 @@
 import './style.css'
 import logo from '../assets/Mesa.png'
 import CartWidget from './CartWidget.js'
+import {NavLink} from 'react-router-dom'
 
 const NavBar = () => {
     return (
@@ -9,9 +10,11 @@ const NavBar = () => {
 
         <div className="menu">
             <ul>
-                <li><a href="#">Tortas</a></li>
-                <li><a href="#">Nosotros</a></li>
-                <li><a href="#">Contacto</a></li>
+                <NavLink className={({isActive})=>isActive ? "active" : "inactive" } to="/Productos">Productos</NavLink>
+                <NavLink className={({isActive})=>isActive ? "active" : "inactive" } to="/Productos/Tortas">Tortas</NavLink>
+                <NavLink className={({isActive})=>isActive ? "active" : "inactive" } to="/Productos/Cupcakes">Cupcakes</NavLink> 
+                <NavLink className={({isActive})=>isActive ? "active" : "inactive" } to="/Nosotros">Nosotros</NavLink>
+                <NavLink className={({isActive})=>isActive ? "active" : "inactive" } to="/Contacto">Contacto</NavLink>
             </ul>
         </div>
         

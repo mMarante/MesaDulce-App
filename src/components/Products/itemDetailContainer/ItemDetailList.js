@@ -5,16 +5,13 @@ const ItemDetailList = ({product}) => {
   return (
      
     <>
-    {console.log(product)} 
-     
-     
       <ItemDetail 
       name={product.name}
       description={product.description}
       price={product.price}
       stock={product.stock}
       image={product.image}
-      key={product.id}
+      id={product.id}
       />;  
   </>  
     
