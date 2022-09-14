@@ -6,8 +6,7 @@ import { useParams } from "react-router-dom";
 
 
 const ItemListContainer = () =>{
-    const {categoryId} = useParams();
-    console.log ("categoryId",categoryId); 
+    const {categoryId} = useParams(); 
     const [items, setItems] = useState([]);
 
     const getData = new Promise((resolve,reject)=>{
@@ -22,7 +21,6 @@ const ItemListContainer = () =>{
             const newProducts = result.filter(item=>item.category === categoryId);
             
             setItems(newProducts)
-            console.log(newProducts)
         } else{setItems(result)}
         })
     },[categoryId])

@@ -1,20 +1,23 @@
 import "./itemDetail.css"
 import ItemCount from "../../counter/ItemCount"
 
-const ItemDetail = ({id,name,description,price,image,stock}) => {
+const ItemDetail = ({items}) => {
+  const onAdd=(counter)=>{
+    console.log(`Recibimos ${counter}`)
+  }
   return (
     <>
     <div className="itemDetail">
-            <img src={image} alt={name}/>
+            <img src={items.image} alt={items.name}/>
             <div className="detail">
-            <h2>{name}</h2>
-            <h3>Descripcion: {description}</h3>
-            <h3>Precio: {price} </h3>
-            <h3>Stock: {stock} </h3>
+            <h2>{items.name}</h2>
+            <h3>Descripcion: {items.description}</h3>
+            <h3>Precio: {items.price} </h3>
+            <h3>Stock: {items.stock} </h3>
             </div>
     </div>
 
-    <ItemCount stock={20} initial={1}/>
+    <ItemCount stock={items.stock} initial={1} onAdd={onAdd}/>
     </>
     
   )

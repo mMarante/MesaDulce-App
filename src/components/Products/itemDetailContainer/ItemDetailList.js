@@ -4,16 +4,7 @@ const ItemDetailList = ({product}) => {
 
   return (
      
-    <>
-      <ItemDetail 
-      name={product.name}
-      description={product.description}
-      price={product.price}
-      stock={product.stock}
-      image={product.image}
-      id={product.id}
-      />;  
-  </>  
+    <><ItemDetail items={product}/>;</>  
     
     );
 };

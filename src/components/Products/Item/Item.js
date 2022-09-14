@@ -1,23 +1,22 @@
 import "./card.css"
 import { Link } from "react-router-dom"
 
-const Item = ({id,name,description,price,image,stock}) => {
+const Item = ({item}) => {
   return (
-    
     <div className="card">
-      <img src={image} alt={name}/>
+      <img src={item.image} alt={item.name}/>
       <div className="cardTitles">
-      <h2>{name}</h2>
-      <p>{description}</p>
+      <h2>{item.name}</h2>
+      <p>{item.description}</p>
       </div>
         <div className="cardDetails">
-        <p>{price}</p>
-        <p> Stock:{stock}</p>
+        <p>{item.price}</p>
+        <p> Stock:{item.stock}</p>
         </div>
-        <Link to={`/Item/${id}}`}>
-        <button className="btnDetalle">Mas Info</button>
+        <Link to={`/Item/${item.id}`}>
+        <button className="btnDetalle">Mas Info</button> 
         </Link>
-    </div>
+        </div>
   )
 }
 
