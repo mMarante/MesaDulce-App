@@ -18,7 +18,8 @@ const NavBar = () => {
             </ul>
         </div>
         
-        <CartWidget/>
+        <NavLink className={({isActive})=>isActive ? "active" : "inactive" } to="/Cart"><CartWidget/></NavLink>
+        
 
     </div>)
 }
