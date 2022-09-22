@@ -1,7 +1,8 @@
-import {React,useState} from "react";
+import {useState} from "react";
+import React from "react";
 
 
-const CartContext = React.createContext();
+export const CartContext = React.createContext();
 
 const CartProvider = ({children})=>{
     
@@ -21,18 +22,20 @@ const CartProvider = ({children})=>{
         if(isInCart(item.id)){
             const productPos = productCartList.findIndex(product=> item.id === item.id );
             const newArray = [...productCartList];
-            newArray[productPos].quantity = newArray[product].quantity + quantity;
+            newArray[productPos].quantity = newArray[productPos].quantity + quantity;
+            newArray[productPos].quantityPrice = newArray[productPos].quantity * newArray[productPos].price;
             setProductCartList(newArray);
         }else{
 
         const newArray = [...productCartList];
+        newProduct.quantityPrice = newProduct.quantity * newProduct.price
         newArray.push(newProduct);
         setProductCartList(newArray);
     }
     }
 
     const removeItem = (itemId)=>{
-        const newArray = productCartList.filter(product=product.id !== itemId);
+        const newArray = productCartList.filter(product=>product.id !== itemId);
         setProductCartList(newArray);
     }
 
@@ -40,11 +43,21 @@ const CartProvider = ({children})=>{
         setProductCartList([]);
     }
 
+    const getFinalPrice = ()=>{
+        const finalPrice = productCartList.reduce((acc,item)=>acc+item.quantityPrice,0);
+        return finalPrice;
+    }
+
+    const getFinalProducts =()=>{
+        const finalProducts = productCartList.reduce((acc,item)=>acc+item.quantity,0);
+        return finalProducts;
+    }
+
     return(
-        <CartContext.Provider value={{productCartList, addItem, removeItem,clear}}>
+        <CartContext.Provider value={{productCartList, addItem, removeItem,clear,isInCart,getFinalPrice,getFinalProducts}}>
             {children}
         </CartContext.Provider>
     )
 }
 
-export default {CartContext,CartProvider}
+export default CartProvider

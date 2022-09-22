@@ -1,9 +1,14 @@
-import "./itemDetail.css"
-import ItemCount from "../../counter/ItemCount"
+import{useState,useContext} from 'react';
+import "./itemDetail.css";
+import ItemCount from "../../counter/ItemCount";
+import { CartContext } from '../../../context/CartContext';
 
 const ItemDetail = ({items}) => {
+  
+  const {addItem} = useContext(CartContext);
+  
   const onAdd=(counter)=>{
-    console.log(`Recibimos ${counter}`)
+    addItem(items,counter)
   }
   return (
     <>

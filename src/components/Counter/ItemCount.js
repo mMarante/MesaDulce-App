@@ -1,4 +1,5 @@
-import { useState } from "react"
+import { useState } from "react";
+
 
 const ItemCount = ({stock,initial,onAdd}) => {
     const [counter, setCounter] = useState(initial);
@@ -11,7 +12,6 @@ const ItemCount = ({stock,initial,onAdd}) => {
             if (counter>0){
                 setCounter(counter - 1)};
             } 
-            
             
             return (<>
     <div className="counterContainer">
