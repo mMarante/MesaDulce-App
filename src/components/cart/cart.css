@@ -1,0 +1,57 @@
+.cartContainer{
+    background-color: beige;
+    padding: 20px;
+    border-radius: 20px;
+    margin: 50px;
+}
+
+.cart{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: center;
+}
+
+.form{
+    padding: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    background-color: #bbbb9c;
+    border-radius: 10px;
+    color: beige;
+}
+
+.form button{
+    color: beige;
+}
+
+.form button:hover{ color: cadetblue;}
+
+button {color:cadetblue}
+.redux{background-color: rgb(255, 251, 251);
+padding: 10px;    
+margin: 10px;
+border-radius: 10px;}
+
+.redux h2{ 
+    color: #bbbb9c;
+}
+
+.redux button{
+    float: right;
+}
+
+h3{color: beige;
+background-color:burlywood;
+padding: 10px;
+border-radius: 10px;
+text-align: end;}
+
+.empty{
+    text-align: center;
+    letter-spacing: 5px;
+    color: cadetblue;
+}
+

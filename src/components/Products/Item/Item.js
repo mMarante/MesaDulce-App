@@ -4,15 +4,15 @@ import { Link } from "react-router-dom"
 const Item = ({item}) => {
   return (
     <div className="card">
-      <img src={item.image} alt={item.name}/>
+      <img src={item.img} alt={item.title}/>
       <div className="cardTitles">
-      <h2>{item.name}</h2>
+      <h2>{item.title}</h2>
       <p>{item.description}</p>
       </div>
         <div className="cardDetails">
-        <p>{item.price}</p>
-        <p> Stock:{item.stock}</p>
-        </div>
+        <h3>${item.price}</h3>
+        <p>Stock:{item.stock}</p></div>
+      
         <Link to={`/Item/${item.id}`}>
         <button className="btnDetalle">Mas Info</button> 
         </Link>

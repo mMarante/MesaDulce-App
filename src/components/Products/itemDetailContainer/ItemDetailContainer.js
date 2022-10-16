@@ -1,4 +1,5 @@
-import data from "../listContainer/mock-data"
+import {db} from "../../../utils/firebase";
+import {doc,getDoc} from "firebase/firestore"
 import { useEffect, useState } from "react";
 import ItemDetailList from "./ItemDetailList";
 import { useParams } from "react-router-dom";
@@ -7,21 +8,18 @@ const ItemDetailContainer = () =>{
     const {productId} = useParams();
     const [item, setItem] = useState([]);
 
-    const getData = (cosa) =>{
-    return new Promise((resolve,reject)=>{
-        const producto = data.find(item=>item.id === parseInt(cosa));
-            resolve(producto);
-            console.log(producto, "producto")
-     })};
-
     useEffect(()=> {
         const getProducto = async()=>{
-            const produ = await getData(productId);
-            setItem(produ);
-            console.log(produ,"produ final")
+          const queryRef= doc(db,"Products",productId);
+          const response= await getDoc(queryRef);
+          const productDetail= {
+            ...response.data(),
+            id:response.id,
+          }
+          setItem(productDetail)
     }
     getProducto();
-    },[productId])
+    },[productId]) 
     
     return(
         

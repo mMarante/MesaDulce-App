@@ -1,7 +1,29 @@
 .itemDetail{
+    margin-left: 20%;
+    margin-top: 20px;
+    width: 400px;
     display: flex;
-    background-color: rgb(218, 222, 119);
-    text-align:left;
+    flex-direction: column;
+    background-color: #d2d3a4;
     justify-content: center;
+    border-radius: 20px;
 
+}
+
+.itemDetail h2{
+    text-align: center;
+    letter-spacing: 5px;
+    font-size: 25px;
+}
+
+.itemDetail h3{
+ text-align: center;
+ background-color:#a2a298;
+ border-radius: 0%;
+
+}
+
+.itemDetail img{
+    height: 300px;
+    object-fit: contain;
 }

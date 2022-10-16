@@ -30,53 +30,17 @@
 .carrito{ display: flex;
     align-items: center;}
 
+
+.carrito img{ height: 40px;}
+
 .counter{
     color: antiquewhite;
+    font-size: 11px;
     background-color: brown;
     padding: 5px;
     border-radius: 100%;
 }
 
-.carrito img{ height: 40px;}
-
-.counterContainer{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    border-radius: 10px;
-    background-color: rgb(194, 194, 194);
-    width: 300px;
-    padding: 20px;
-    margin-left: 40%;
-    margin-bottom: 20px;
-    color: rgb(54, 54, 54);
-}
-
-.cardCounter{
-    font-size: larger;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 200px;
-    background-color: rgb(246, 239, 239);
-    border-radius: 10px;
-    border: solid gray 2px;
-    padding: 0px 30px;
-}
-
-button { all: unset;
-    cursor: pointer;
-    padding: 5px ;
-    color: rgb(67, 123, 214);
-    font-size: larger;
-    font-weight: bold;
-}
-
-button:hover{
-    color: rgb(72, 219, 72);
-    transition: all ease-in 0.2s;
-}
 
 .active {
     color: brown;

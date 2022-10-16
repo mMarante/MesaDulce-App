@@ -13,16 +13,16 @@ const ItemDetail = ({items}) => {
   return (
     <>
     <div className="itemDetail">
-            <img src={items.image} alt={items.name}/>
+            <img src={items.img} alt={items.title}/>
             <div className="detail">
-            <h2>{items.name}</h2>
+            <h2>{items.title}</h2>
             <h3>Descripcion: {items.description}</h3>
-            <h3>Precio: {items.price} </h3>
+            <h3>Precio: ${items.price} </h3>
             <h3>Stock: {items.stock} </h3>
             </div>
+    <ItemCount stock={items.stock} initial={1} onAdd={onAdd}/>
     </div>
 
-    <ItemCount stock={items.stock} initial={1} onAdd={onAdd}/>
     </>
     
   )

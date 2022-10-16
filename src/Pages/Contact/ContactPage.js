@@ -21,7 +21,7 @@ const ContactPage = () => {
     getData();
   },[])
   return (
-    <div>ContactPage</div>
+    <h1>Sitio en Construccion</h1>
   )
 }
 
