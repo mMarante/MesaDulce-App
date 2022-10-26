@@ -28,7 +28,8 @@ const sendOrder = (event)=>{
     console.log("order enviada",order)
     console.log(idOrder)
     const queryRef = collection(db,"orders");
-    addDoc(queryRef,order).then(response=>setIdOrder(response.id))
+    addDoc(queryRef,order).then(response=>setIdOrder(response.id));
+    clear();
 }
 
 return (
@@ -65,6 +66,7 @@ return (
         <>
         <div className="empty">
         <h1> Su carrito esta vacio!! 😱 </h1>
+        {idOrder && <p><h4>Su orden fue creada!!!</h4> id: {idOrder}</p>}
          <Link to="/Productos">
             Seguir Comprando
          </Link> 

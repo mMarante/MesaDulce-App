@@ -1,7 +1,7 @@
 import './App.css';
-import NavBar from './components/navBar/NavBar';
-import ItemListContainer from './components/Products/listContainer/ItemListContainer';
-import ItemDetailContainer from './components/Products/itemDetailContainer/ItemDetailContainer';
+import NavBar from "./components/navBar/NavBar";
+import ItemListContainer from "./components/Products/listContainer/ItemListContainer";
+import ItemDetailContainer from "./components/Products/itemDetailContainer/ItemDetailContainer"
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import ContactPage from './Pages/Contact/ContactPage';
 import Nosotros from './Pages/Nosotros/nosotros';
@@ -16,6 +16,7 @@ function App() {
           <div>
           <NavBar/>
           <Routes>
+          <Route path='/' element={<ItemListContainer/>}/>
           <Route path='/Productos' element={<ItemListContainer/>}/>  
           <Route path='/Productos/:categoryId' element={<ItemListContainer/>}/>
           <Route path='/Nosotros' element={<Nosotros/>}/>

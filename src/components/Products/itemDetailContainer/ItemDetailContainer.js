@@ -23,9 +23,18 @@ const ItemDetailContainer = () =>{
     
     return(
         
-      <div>
+     /*  <div>
         <ItemDetailList product={item} />
-      </div>
+      </div> */
+
+      <>
+
+        <div>
+        { item ? (<ItemDetailList product={item}/>):(
+            <h2>Cargando...</h2>
+        )}
+        </div>
+        </>
     )
 }
 
