@@ -1,4 +1,4 @@
-import Cake from "../assets/Cake.png"
+import Cake from "../Assets/Cake.png"
 import { NavLink } from 'react-router-dom'
 import { useContext } from 'react'
 import { CartContext } from '../../context/CartContext'

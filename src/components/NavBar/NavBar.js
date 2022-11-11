@@ -1,5 +1,5 @@
 import './style.css'
-import Mesa from "../assets/Mesa.png"
+import Mesa from "../Assets/Mesa.png"
 import CartWidget from './CartWidget.js'
 import {NavLink} from 'react-router-dom'
 
