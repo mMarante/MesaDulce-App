@@ -1,12 +1,12 @@
 import './style.css'
-import logo from '../assets/Mesa.png'
+import Mesa from "../assets/Mesa.png"
 import CartWidget from './CartWidget.js'
 import {NavLink} from 'react-router-dom'
 
 const NavBar = () => {
     return (
     <div className="navbar-container">
-        <div className="logo"> <img src={logo} alt="logo"></img> </div>
+        <div className="logo"> <img src={Mesa} alt="logo"></img> </div>
 
         <div className="menu">
             <ul>

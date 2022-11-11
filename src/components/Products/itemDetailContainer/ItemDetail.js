@@ -1,6 +1,6 @@
-import{useState,useContext} from 'react';
+import{useContext} from 'react';
 import "./itemDetail.css";
-import ItemCount from "../../counter/ItemCount";
+import ItemCount from "../../counter/ItemCount"
 import { CartContext } from '../../../context/CartContext';
 
 const ItemDetail = ({items}) => {
