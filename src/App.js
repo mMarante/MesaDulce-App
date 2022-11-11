@@ -1,6 +1,6 @@
 import './App.css';
-import NavBar from "./components/navBar/navBar";
-import ItemListContainer from "./components/Products/listContainer/ItemListContainer";
+import NavBar from "./components/NavBar/NavBar";
+import ItemListContainer from "./components/Products/ListContainer/ItemListContainer";
 import ItemDetailContainer from "./components/Products/itemDetailContainer/ItemDetailContainer"
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import ContactPage from './Pages/Contact/ContactPage';
