@@ -1,6 +1,6 @@
-import React,{useContext, useEffect} from 'react'
+import React,{useEffect} from 'react'
 import {db} from "../../utils/firebase";
-import {doc,getDoc, collection, getDocs, query, where, limit } from "firebase/firestore"
+import {collection, getDocs, query, where, limit } from "firebase/firestore"
 
 
 const ContactPage = () => {
